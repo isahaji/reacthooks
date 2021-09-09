@@ -1,24 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import MovieCard from "./comp/MovieCard";
+import dummy from "./data";
+import { useState } from "react";
+
 
 function App() {
+  const [title, setTitle] = useState(0)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div>
+    <label>
+    Name:
+    <input onChange={event => setTitle(event.target.value)}/>
+    </label>
+    <div className='grid lg:grid-cols-3 sm:grid-cols-1 p-4 gap-4'>
+
+{ 
+  dummy.filter(d => d.rating > title  ).map((datas) => (
+          <MovieCard
+            key={datas._id}
+            title={datas.title}
+            description={datas.description}
+            posterURL={datas.posterURL}
+            rating={datas.rating}
+          />))}
+        
+            </div>
+  </div>
   );
 }
 
