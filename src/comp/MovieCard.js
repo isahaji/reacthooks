@@ -9,6 +9,7 @@ import Typography from '@material-ui/core/Typography';
 import { red } from '@material-ui/core/colors';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import { Button } from '@material-ui/core';
+import Rating from '@material-ui/lab/Rating';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -58,7 +59,7 @@ export default function MovieCard({title, description, posterURL, rating}) {
         <div className='flex justify-between inline-block'>
 
         <div>
-        Rating: {rating}
+        <Rating name="size-small" defaultValue={rating} size="small" precision={0.5}/>
 </div>
 
     <div>

@@ -3,7 +3,7 @@ const dummy = [
         title: "Star Wars",
         description: "Sci",
         posterURL: "isahaji.com",
-        rating: "4"
+        rating: "4.5"
     },
     {
         title: "Avenger",
@@ -15,7 +15,7 @@ const dummy = [
         title: "Interstellar",
         description: "Sci",
         posterURL: "isahaji.com",
-        rating: "9"
+        rating: "5"
     },
 ]
 
